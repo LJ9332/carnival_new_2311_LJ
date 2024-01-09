@@ -29,24 +29,22 @@ RSpec.describe Visitor do
         end
     end
 
+    describe '#tall_enough?' do
+        it "establishes if visitor meets required height" do
+            expect(@visitor1.tall_enough?(54)).to be(true)
+            expect(@visitor2.tall_enough?(54)).to be(false)
+            expect(@visitor3.tall_enough?(54)).to be(true)
+            expect(@visitor1.tall_enough?(64)).to be(false)
+        end 
+    end
 
 
 
-#=> [:gentle, :thrilling]
-
-#=> #<Visitor:0x000000012f1f30f8 @height=36, @name="Tucker", @preferences=[], @spending_money=5>
-
-#=> #<Visitor:0x000000012f176760 @height=64, @name="Penny", @preferences=[], @spending_money=15>
-
-@visitor1.tall_enough?(54)
 #=> true
 
-@visitor2.tall_enough?(54)
 #=> false
 
-@visitor3.tall_enough?(54)
 #=> true
 
-@visitor1.tall_enough?(64)
 #=> false
 end

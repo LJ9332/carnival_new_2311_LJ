@@ -12,7 +12,11 @@ attr_reader :name, :height, :spending_money, :preferences
         money.gsub('$', '').to_i
     end
 
-    def add_preference
-        
+    def add_preference(preference)
+        @preferences << preference
+    end
+
+    def tall_enough?(required_height)
+        @height >= required_height
     end
 end
